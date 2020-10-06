@@ -14,5 +14,8 @@ elif direction == "right" :
 elif direction == "left":
   print("left we go!")
 
+else:
+  print("I don't understand...was that a direction?")
+  
 print("Analysis complete!")
 

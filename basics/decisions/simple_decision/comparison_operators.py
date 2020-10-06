@@ -6,11 +6,14 @@ first = int(input())
 print("Please enter...another number!")
 second =int(input())
 
+#Finding out which number is bigger
 if first < second:
   print(first, "is smaller than", second)
 
 elif first >second:
   print(first, "is bigger than", second)
+
+#If same number
 
 else:
   print("System does not compute... ERROR...")
