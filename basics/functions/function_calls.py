@@ -15,7 +15,15 @@ def dis_mirror(word):
   print(word, "|" ,word[::-1])
 #define the fifthe function - display the word
 def dis_repeat(word):
-  print(word * num_rep)
+  print("How many times would you like to repeat {}?".format(word))
+  num_rep = int(input())
+  count = 0
+  while count < num_rep:
+    print (word.upper())
+    count = count +1
+    print (word.lower())
+    count = count +1
+
 #Define the Run function
 def run():
   print("Please type a word")
@@ -37,9 +45,10 @@ def run():
   elif (num == 4):
     dis_mirror(word)
   elif (num == 5):
-    print("How many repetitions?")
-    num_rep = int(input())
-    dis_repeat(word)
+   dis_repeat(word)
+  else:
+    print("You have broken the program, and with it, my heart.")
+    
 
 
 #RUN THE PROGRAM
