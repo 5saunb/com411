@@ -14,7 +14,9 @@ def run():
 
   for observation in observations:
     observed_set.add((observation,observations.count(observation)))
-  print ("{} observed {} times.".format(observed_set, observed_set.count()))
+  
+  for key, value in observed_set:
+    print ("{} observed {} times.".format(key, value))
   
 
 run()
