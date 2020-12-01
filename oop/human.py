@@ -85,3 +85,4 @@ human.eat(2)
 print(human.__repr__())
 human.move(120)
 print(human.__repr__())
+
