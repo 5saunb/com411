@@ -66,13 +66,15 @@ class Human(Inhabitant):
     #else:
       #self.energy = (self.energy - movement)
 
-human = Human()
-human.grow()
-human.display()
-print(human.__repr__())
-print(human.__str__())
-human.eat(2)
-print(human.__repr__())
-human.move(120)
-print(human.__repr__())
+if (__name__ == "__main__"):
+
+  human = Human()
+  human.grow()
+  human.display()
+  print(human.__repr__())
+  print(human.__str__())
+  human.eat(2)
+  print(human.__repr__())
+  human.move(120)
+  print(human.__repr__())
 
