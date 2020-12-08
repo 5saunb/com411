@@ -1,4 +1,6 @@
-class Robot:
+from inhabitant import Inhabitant
+
+class Robot(Inhabitant):
   #Class Attribute
   laws = "Protect,Obey and  Survive"
   MAX_ENERGY = 100
@@ -12,7 +14,7 @@ class Robot:
     return f"Robot(name={self.name},age={self.age})"
 
   def __str__(self):
-    return f"My name is {self.name} and I am {self.age} years old."
+    return f"My designation is {self.name} and I am {self.age} Earth Cycles old."
 
   #an initialiser (Special Instance Method)
   def __init__(self):
@@ -25,21 +27,9 @@ class Robot:
   def display(self):
     print(f"I am {self.name}. You have 20 seconds to comply")
 
-  def grow(self):
-    self.age =+ 1
-  
-  def move(self,movement):
-    if (self.energy - movement) < Robot.MIN_ENERGY:
-      self.energy = Robot.MIN_ENERGY
-    else:
-      self.energy = (self.energy - movement)
-  def eat(self,food):
-    if (self.energy + food) > Robot.MAX_ENERGY:
-      self.energy = Robot.MAX_ENERGY
-    else:
-      self.energy = (self.energy +food)
 
-class Human:
+
+class Human(Inhabitant):
 
   #Class Attribute
   MAX_ENERGY = 100
@@ -61,20 +51,20 @@ class Human:
   def __str__(self):
     return f"My name is {self.name} and I am {self.age} years old."
 
-  def grow(self):
-    self.age =+ 1
+  #def grow(self):
+    #self.age =+ 1
   
-  def eat(self,food):
-    if (self.energy + food) > Human.MAX_ENERGY:
-      self.energy = Human.MAX_ENERGY
-    else:
-      self.energy = (self.energy +food)
+  #def eat(self,food):
+    #if (self.energy + food) > Human.MAX_ENERGY:
+      #self.energy = Human.MAX_ENERGY
+   # else:
+      #self.energy = (self.energy +food)
 
-  def move(self,movement):
-    if (self.energy - movement) < Human.MIN_ENERGY:
-      self.energy = Human.MIN_ENERGY
-    else:
-      self.energy = (self.energy - movement)
+  #def move(self,movement):
+    #if (self.energy - movement) < Human.MIN_ENERGY:
+     # self.energy = Human.MIN_ENERGY
+    #else:
+      #self.energy = (self.energy - movement)
 
 human = Human()
 human.grow()
@@ -85,3 +75,4 @@ human.eat(2)
 print(human.__repr__())
 human.move(120)
 print(human.__repr__())
+
