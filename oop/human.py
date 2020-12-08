@@ -54,6 +54,7 @@ class Human(Inhabitant):
   #def grow(self):
     #self.age =+ 1
   
+<<<<<<< HEAD
   #def eat(self,food):
     #if (self.energy + food) > Human.MAX_ENERGY:
       #self.energy = Human.MAX_ENERGY
@@ -77,4 +78,5 @@ if (__name__ == "__main__"):
   print(human.__repr__())
   human.move(120)
   print(human.__repr__())
+=======
 
